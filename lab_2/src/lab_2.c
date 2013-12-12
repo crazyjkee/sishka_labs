@@ -133,7 +133,7 @@ void n12(double x,double y,double z){
 }
 
 
-int main() {
+int main1() {
 	n1(14.26,-1.22,0.035);
 	n2(-4.5,0.75*pow(10,-4),84.5);
 	n3(0.0374,-0.825,16);
