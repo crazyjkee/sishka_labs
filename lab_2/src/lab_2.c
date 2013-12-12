@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : lab_2.c
- Author      : 
+ Author      :
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
@@ -150,7 +150,45 @@ int main() {
 }
 
 void ploshad_kv(double a){
-	printf("Площадь квадрата - %lf, периметр квадрата %lf",pow(a,2),a*4);
+	printf("Площадь квадрата - %lf, периметр квадрата %lf\n",pow(a,2),a*4);
 }
 
-void ploshad_pryamk(){}
+void ploshad_pryamk(double a,double b){
+	printf("Площадь прямоугольника - %lf, периметр прямоугольника\n %lf",a*b,a*2+b*2);
+}
+void ploshad_pryamg_treyg(double a,double b){
+	double c=sqrt(pow(a,2)+pow(b,2));
+	printf("Площадь прямоугольного треугольника - %lf,периметр прямоугольного треугольника - %lf \n",1/2*a*b,c+a+b);
+}
+void ploshad_ravn_treyg(double a,double b){
+	double c=sqrt(pow(a,2)+pow(b,2));
+	printf("Площадь равнобедренного треугольника - %lf, периметр равнобедренного треугольника - %lf\n",1/2*a*b,c*2+a);
+}
+void ploshad_ravn_trapec(double a,double b,double c,double e){
+	printf("Площадь равнобедренной трапеции - %lf, периметр равнобедренной трапеции - %lf",((a+b)/2)*c,a+b+2*e);
+}
+void ploshad_romba(double a,double b){
+	double c=sqrt(pow(a/2,2)+pow(b/2,2));
+	printf("Площадь ромба - %lf , периметр ромба - %lf\n",1/2*a*b,4*c);
+
+}
+void ploshad_ostroyg_treyg(double osnov,double vis,double storona_1,double storona_2){
+	printf("Площадь остроугольного треугольника - %lf, периметр остоуг треуг - %lf \n",1/2*osnov*vis,osnov+storona_1+storona_2);
+}
+void ploshad_typoyg_treyg(double osnov,double vis,double storona_1,double storona_2){
+	printf("Площадь тупоугольного треугольника - %lf, периметр остоуг треуг - %lf \n",1/2*osnov*vis,osnov+storona_1+storona_2);
+}
+void ploshad_samoperesek_chetirehyg(double d1,double d2,double osn_1,double osn_2,double deg_about_d1_d2){
+	printf("Площадь выпуклого треугольника - %lf,периметр - %lf\n",1/2*sin(deg_about_d1_d2)*d1*d2,d1+d2+osn_1+osn_2);
+}
+void ploshad_vipykl_chetirehyg(double a,double b,double c,double d,double polysym_protiv_deg){
+	double p=(a+b+c+d)/2;
+	double S=sqrt((p-a)*(p-b)*(p-c)*(p-d)-a*b*c*d*pow(cos(polysym_protiv_deg),2));
+	printf("Площадь выпуклого четырех угольника - %lf,периметр - %lf",S,a+b+c+d);
+	}
+void ploshad_parall(double osn,double b,double h){
+	printf("Площадь параллелограмма - %lf,периметр - %lf",osn*h,2*osn+2*b);
+}
+void ploshad_circle(double r){
+	printf("Площадь круга - %lf,длина окружности - %lf",PI*pow(r,2),2*PI*r);
+}
