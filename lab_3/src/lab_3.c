@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 void n1() {
 	int years;
@@ -44,9 +45,45 @@ void n3() {
 		printf("%i копеек", i);
 }
 
+void tvorchn1(){
+	float ah,am,da,vh,vm;
+	int min,hour;
+	puts("Введите минуты");
+	scanf("%d",&min);
+	puts("Введите часы");
+	scanf("%d",&hour);
+	 if (hour < 0 || hour > 11){
+	      puts("Некорректно ввели часы");
+	      exit(EXIT_FAILURE);
+	 }
+	   if (min < 0 || min > 59){
+		   puts("Некорректно ввели минуты");
+	      exit(EXIT_FAILURE);
+	   }
+	   int hm, res;
+
+	   hm = (hour*5 + min/12)%60;
+
+	   if (hm == min)
+	      puts("Совпадают");
+	   else if (hm > min)
+	   {
+	      res = hm - min;
+	      res += ceil((res/12.0+0.5)*10.0)/10.0;
+	   }
+	   else
+	   {
+	      res = (hour + 1) * 5;
+	      res += ceil((res/12.0+0.5)*10.0)/10.0;
+	      res += 60 - min;
+	   }
+	   printf("Догонит через %d минут\n",res);
+}
+
 int main(void) {
 	//n1();
 	//n2(1900);
-	n3();
+	//n3();
+	tvorchn1();
 	return EXIT_SUCCESS;
 }
