@@ -151,19 +151,19 @@ void n8() {
 }
 
 void n9() {
-	int n, i, j = 0;
+	int n, i, h, s = 0;
 
-	scanf("%d", &n);
-	int a[n];
-	for (i = 0; i < n; i++)  // ЧИТАЕМ ВХОД
-		scanf("%d", &a[i]);
-	int min = a[0];
-	for (i = 0; i < n; i++)
-		if (min == a[i])
-			min = i + 2;
-	for (i = min; i < n; i++)  // ВЫВОДИМ РЕЗУЛЬТАТ
-		j = fabs(j) + fabs(a[i]);
-	printf("%d \n", j);
+		scanf("%d", &n);
+		int a[n];
+		for (i = 0; i <= n; i++) {
+			scanf("%d", &a[i]);
+			if (a[i] == 0)
+				h = i;
+		}
+		for (i = h; i <= n; i++) {
+			s += a[i];
+		}
+		printf("%d", s);
 }
 
 void n10() {
@@ -275,6 +275,7 @@ void n16(){
 }
 
 int main() {
+	puts("Введи размер массива\n");
 	//n1();
 	// n2();
 	// n3();
@@ -283,14 +284,14 @@ int main() {
 	//n6();
 	//n7();
 	// n8();
-	//n9();
+	n9();
 	//n10();
 	//n11();
 	//n12();
 	//n13();
 	//n14();
 	//n15();
-	n16();
+	//n16();
 
 	return EXIT_SUCCESS;
 }
