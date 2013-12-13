@@ -69,12 +69,12 @@ void tvorchn1(){
 	   else if (hm > min)
 	   {
 	      res = hm - min;
-	      res += ceil((res/12.0+0.5)*10.0)/10.0;
+	      //res += ceil((res/12.0+0.5)*10.0)/10.0;
 	   }
 	   else
 	   {
 	      res = (hour + 1) * 5;
-	      res += ceil((res/12.0+0.5)*10.0)/10.0;
+	      //res += ceil((res/12.0+0.5)*10.0)/10.0;
 	      res += 60 - min;
 	   }
 	   printf("Догонит через %d минут\n",res);
