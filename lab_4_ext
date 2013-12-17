@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int fac(int f){
+	int i;
+	int res = 1;
+	for (i = 1; i <= f; i++)
+		res *= i;
+
+	return res;
+}
+
+double Y( double x )
+{
+	return (exp( x ) + exp( -x ))/2;
+}
+
+double S( double x )
+{
+	int k;
+	double res = 0;
+	for (k = 1; k < 10; k++)
+	{
+		res +=pow(x, 2*k)/fac(2*k);
+	}
+}
+
+int main(void) {
+
+	double a,b,h,x;
+	printf("Vvednte <a> <b> <h>");
+	scanf("%lf %lf %lf", &a, &b, &h);
+
+	for (x = a; x < b; x += h)
+	{
+
+	}
+
+}
